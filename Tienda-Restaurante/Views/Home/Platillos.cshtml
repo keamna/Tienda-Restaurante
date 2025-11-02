@@ -1,7 +1,6 @@
 ﻿@using Tienda_Restaurante.DTOs
 @model PlatilloDisplayModel
 
-
 @{
 
 }
@@ -64,7 +63,7 @@
 
 @section Scripts {
     <script>
-        async function add(bookId) {
+        async function add(platilloId) {
              var usernameEl = document.getElementById("username");
         if(usernameEl==null){
             window.location.href = "/Identity/Account/Login";
@@ -74,7 +73,7 @@
           //  }
         }
             try {
-                var response = await fetch(`/Cart/AddItem?patilloId=${platilloId}`);
+                var response = await fetch(`/Cart/AddItem?platilloId=${platilloId}`);
                 if (response.status == 200) {
                     var result = await response.json();
                     var cartCountEl = document.getElementById("cartCount");
