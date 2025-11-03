@@ -19,5 +19,8 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     public DbSet<Orden> Ordenes { get; set; }
     public DbSet<DetalleOrden> DetalleOrdenes { get; set; }
     public DbSet<OrdenEstado> OrdenesEstado { get; set; }
+    public DbSet<Stock> Stocks { get; set; }
+
+
 
 }
