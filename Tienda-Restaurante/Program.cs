@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Tienda_Restaurante.Areas.Identity.Data;
 using Tienda_Restaurante.Repositories;
+using Tienda_Restaurante.Views.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +34,12 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddTransient<ICartRepository, CartRepository>();
 builder.Services.AddTransient<IUserOrderRepository, UserOrderRepository>();
 builder.Services.AddTransient<IStockRepository, StockRepository>();
+builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddTransient<IFileService, FileService>();
+builder.Services.AddTransient<IPlatilloRepository, PlatilloRepository>();
+
+
+
 
 
 var app = builder.Build();
