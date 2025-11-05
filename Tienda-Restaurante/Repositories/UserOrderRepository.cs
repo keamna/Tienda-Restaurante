@@ -32,9 +32,9 @@ namespace Tienda_Restaurante.Repositories
             await _db.SaveChangesAsync();
         }
 
-        public Task<Orden?> GetOrderById(int id)
+        public async Task<Orden?> GetOrderById(int id)
         {
-            throw new NotImplementedException();
+            return await _db.Ordenes.FindAsync(id);
         }
 
         public async Task<IEnumerable<OrdenEstado>> GetOrderStatuses()
