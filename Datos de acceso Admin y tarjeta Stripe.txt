@@ -1,0 +1,9 @@
+Admin: 
+admin@gmail.com
+Admin@123
+
+Stripe tarjeta: 
+4242 4242 4242 4242
+Fecha vencimiento: 09/26 
+Codigo: 123
+
